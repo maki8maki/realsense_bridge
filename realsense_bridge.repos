@@ -1,0 +1,10 @@
+repositories:
+  realsense-ros:
+    type: git
+    url: https://github.com/IntelRealSense/realsense-ros.git
+    version: ros2-development
+
+  ros1_bridge:
+    type: git
+    url: https://github.com/ros2/ros1_bridge.git
+    version: foxy
