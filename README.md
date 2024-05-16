@@ -33,3 +33,32 @@ colcon build --symlink-install --packages-select ros1_bridge realsense_bridge --
 （ros1_bridgeのビルドは別に行ったほうが良いみたいなのでそれに準じている）
 
 [realsense-ros](https://github.com/IntelRealSense/realsense-ros)や[ros1_bridge](https://github.com/ros2/ros1_bridge)のインストール・ビルドなどでエラー等が出た場合はそれぞれのレポジトリを参照する
+
+## Usage
+
+ターミナルA：ROS1の起動
+
+```bash
+source /opt/ros/<ros1_distro>/setup.bash
+roscore
+```
+---
+
+ターミナルB：realsense_bridgeの実行
+
+```bash
+source /opt/ros/<ros2_distro>/setup.bash
+source ~/colcon_ws/install/local_setup.bash
+ros2 launch realsense_bridge_launch.py
+```
+
+---
+
+ターミナルC：ROS1でrealsenseを利用するコードの実行
+
+```bash
+source /opt/ros/<ros1_distro>/setup.bash
+source ~/catkin_ws/devel/local_setup.bash
+rosrun <package_name> <file_name>
+```
+
