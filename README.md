@@ -49,7 +49,7 @@ roscore
 ```bash
 source /opt/ros/<ros2_distro>/setup.bash
 source ~/colcon_ws/install/local_setup.bash
-ros2 launch realsense_bridge_launch.py
+ros2 launch realsense_bridge realsense_bridge_launch.py
 ```
 
 ---
