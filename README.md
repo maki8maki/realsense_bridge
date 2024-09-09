@@ -19,7 +19,7 @@ git clone https://github.com/maki8maki/realsense_bridge.git
 ```bash
 cd ~/colcon_ws
 vcs import src < src/realsense_bridge/realsense_bridge.repos
-rosdep install -i --from-paths src/
+rosdep install -i --from-paths src/ --skip-keys=librealsense2 -y
 ```
 
 ビルドする
